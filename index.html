@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Shundu ❤️</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #4b2e2e; /* brown */
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      perspective: 1000px;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+      position: relative;
+      z-index: 2;
+      transform-style: preserve-3d;
+    }
+    h1 {
+      font-size: 2.5em;
+      color: #ffe6f0; /* light text */
+      margin-bottom: 10px;
+      text-align: center;
+      animation: fadeInZoom 2s ease forwards;
+    }
+    .section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 80px 0;
+      opacity: 0;
+      transform: translateY(50px) scale(0.95) rotateY(20deg);
+      transition: all 1s ease;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 2;
+    }
+    .section.reveal {
+      opacity: 1;
+      transform: translateY(0) scale(1) rotateY(0);
+    }
+    .section p {
+      flex: 1;
+      font-size: 1.2em;
+      line-height: 1.6;
+      color: #f8d7da; /* lighter text */
+      margin: 20px;
+      position: relative;
+      z-index: 3;
+    }
+    .section .photo {
+      flex: 1;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+    .section .photo img {
+      width: 90%;
+      max-width: 300px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      transform: rotate(-3deg) scale(0.9);
+      transition: transform 1s ease;
+    }
+    .section.reveal .photo img {
+      transform: rotate(0deg) scale(1.1);
+    }
+    .section:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+    .section.last {
+      flex-direction: column;
+      text-align: center;
+    }
+    .section.last .photo img {
+      margin-top: 20px;
+    }
+    @keyframes fadeInZoom {
+      0% { opacity: 0; transform: scale(0.8); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+    .floating {
+      position: absolute;
+      bottom: -50px;
+      animation: floatSmoke linear infinite;
+      opacity: 0.9;
+      pointer-events: none;
+      z-index: 2;
+    }
+    @keyframes floatSmoke {
+      0% { transform: translateY(0) translateX(0) scale(0.6); opacity: 0.8; }
+      25% { transform: translateY(-30vh) translateX(-15px) scale(0.8); opacity: 0.7; }
+      50% { transform: translateY(-60vh) translateX(15px) scale(1); opacity: 0.6; }
+      75% { transform: translateY(-90vh) translateX(-10px) scale(1.1); opacity: 0.4; }
+      100% { transform: translateY(-120vh) translateX(10px) scale(1.2); opacity: 0; }
+    }
+    .word {
+      opacity: 0;
+      display: inline-block;
+      transform: translateY(20px);
+      transition: all 0.4s ease;
+    }
+    .word.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎉 Happy 20th Birthday Shundu ❤️ 🎂</h1>
+
+    <div class="section">
+      <p>many many happy returns of the day shundu &lt;3<br>wishing you a blessed and prosperous 20th birthday</p>
+      <div class="photo"><img src="IMG_7298.jpg" alt="photo1"></div>
+    </div>
+
+    <div class="section">
+      <p>its been one hell of rollercoaster ride with you in the past 3 years, and I must say I've never met a someone so simple yet so significant as you. we had our fare share of talks, laughs , trolls , fights , and countless other things, but deep down ive always liked you for who you are.</p>
+      <div class="photo"><img src="unnamed (1).jpg" alt="photo2"></div>
+    </div>
+
+    <div class="section">
+      <p>you made me feel emotions that ive never felt in ages, and i feel like what we had was genuine, although it might have not worked out due to our differences in what we feel for whom, im happy that i met ya.</p>
+      <div class="photo"><img src="unnamed (2).jpg" alt="photo3"></div>
+    </div>
+
+    <div class="section">
+      <p>never could have asked anything more or less for a friend like you. You were, you are, and you'll always be perfect in my eyes.</p>
+      <div class="photo"><img src="unnamed (3).jpg" alt="photo4"></div>
+    </div>
+
+    <div class="section">
+      <p>as we will be parting ways soon, i feel my heart heavy and my eyes watery to say this but, no matter what happens, youll be always someone ill deeply miss, i might have not had the courage to say the things up front of you, but i say all of this with the intention of not holding back any regret.</p>
+      <div class="photo"><img src="unnamed (4).jpg" alt="photo5"></div>
+    </div>
+
+    <div class="section last">
+      <p>once again, happy birthday shunnduuu!! &lt;3</p>
+      <div class="photo"><img src="unnamed (5).jpg" alt="photo6"></div>
+    </div>
+  </div>
+
+  <script>
+    const icons = ["❤️","🤍","🔥❤️","🤗","🎁","🎂"];
+
+    for(let i=0; i<25; i++){
+      const div = document.createElement('div');
+      div.className = 'floating';
+      div.style.left = Math.random() * 100 + 'vw';
+      div.style.animationDuration = 18 + Math.random()*10 + 's';
+      div.style.fontSize = (25+Math.random()*40)+'px';
+      div.textContent = icons[Math.floor(Math.random()*icons.length)];
+      document.body.appendChild(div);
+    }
+
+    document.querySelectorAll('.section p').forEach(p => {
+      let words = p.innerHTML.split(/(\s+)/).map(w => w.trim() ? `<span class="word">${w}</span>` : w).join('');
+      p.innerHTML = words;
+    });
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('reveal');
+          let words = entry.target.querySelectorAll('.word');
+          words.forEach((word, i) => {
+            setTimeout(()=> word.classList.add('visible'), i * 90);
+          });
+
+          if (navigator.vibrate) {
+            let pattern = [200,100,200,100,500,200,500];
+            navigator.vibrate(pattern);
+          }
+        } else {
+          entry.target.classList.remove('reveal');
+          let words = entry.target.querySelectorAll('.word');
+          words.forEach(word => word.classList.remove('visible'));
+        }
+      });
+    }, { threshold: 0.4 });
+
+    document.querySelectorAll('.section').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
